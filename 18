@@ -1,0 +1,26 @@
+public class ReverseCase {
+    public static void main(String[] args) {
+        String str = "Hello World!";
+
+        String reversedCaseString = reverseCase(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("String after reversing case: " + reversedCaseString);
+    }
+
+    public static String reverseCase(String str) {
+        StringBuilder result = new StringBuilder();
+
+        for (char c : str.toCharArray()) {
+            if (Character.isUpperCase(c)) {
+                result.append(Character.toLowerCase(c));
+            } else if (Character.isLowerCase(c)) {
+                result.append(Character.toUpperCase(c));
+            } else {
+                result.append(c);
+            }
+        }
+
+        return result.toString();
+    }
+}

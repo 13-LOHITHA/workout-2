@@ -1,0 +1,20 @@
+public class ChangeCaseOfWord {
+    public static void main(String[] args) {
+        String word = "ExampleWord";
+
+        String upperCaseWord = toUpperCase(word);
+        String lowerCaseWord = toLowerCase(word);
+
+        System.out.println("Original word: " + word);
+        System.out.println("Uppercase word: " + upperCaseWord);
+        System.out.println("Lowercase word: " + lowerCaseWord);
+    }
+
+    public static String toUpperCase(String word) {
+        return word.toUpperCase();
+    }
+
+    public static String toLowerCase(String word) {
+        return word.toLowerCase();
+    }
+}

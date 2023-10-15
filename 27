@@ -1,0 +1,6 @@
+public class SpecialCharacterPrinting {
+    public static void main(String[] args) {
+        String specialString = "This string contains special characters: \n New Line \t Tab \b Backspace \r Carriage Return \\ Backslash \' Single Quote \" Double Quote";
+        System.out.println(specialString);
+    }
+}

@@ -1,0 +1,14 @@
+public class WordCountInSentence {
+    public static void main(String[] args) {
+        String sentence = "The quick brown fox jumps over the lazy dog.";
+
+        int wordCount = countWords(sentence);
+
+        System.out.println("Number of words in the sentence: " + wordCount);
+    }
+
+    public static int countWords(String sentence) {
+        String[] words = sentence.split("\\s+");
+        return words.length;
+    }
+}

@@ -1,0 +1,24 @@
+public class CharacterEncoding {
+    public static void main(String[] args) {
+        String originalString = "Hello, World!";
+        String encodedString = encodeByShifting(originalString, 2);
+
+        System.out.println("Original string: " + originalString);
+        System.out.println("Encoded string: " + encodedString);
+    }
+
+    public static String encodeByShifting(String input, int shift) {
+        StringBuilder encoded = new StringBuilder();
+
+        for (char c : input.toCharArray()) {
+            if (Character.isLetter(c)) {
+                char base = Character.isUpperCase(c) ? 'A' : 'a';
+                encoded.append((char) (((c - base + shift) % 26) + base));
+            } else {
+                encoded.append(c);
+            }
+        }
+
+        return encoded.toString();
+    }
+}

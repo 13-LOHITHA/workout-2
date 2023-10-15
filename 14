@@ -1,0 +1,15 @@
+public class AsciiCodes {
+    public static void main(String[] args) {
+        String str = "hello world";
+
+        System.out.println("ASCII codes for each character:");
+        printAsciiCodes(str);
+    }
+
+    public static void printAsciiCodes(String str) {
+        for (char c : str.toCharArray()) {
+            int asciiValue = (int) c;
+            System.out.println("Character: " + c + ", ASCII code: " + asciiValue);
+        }
+    }
+}

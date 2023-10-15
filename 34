@@ -1,0 +1,29 @@
+public class SwapFirstLastLetters {
+    public static void main(String[] args) {
+        String sentence = "The quick brown fox jumps over the lazy dog.";
+
+        String updatedSentence = swapFirstLastLetters(sentence);
+
+        System.out.println("Original sentence: " + sentence);
+        System.out.println("Updated sentence: " + updatedSentence);
+    }
+
+    public static String swapFirstLastLetters(String sentence) {
+        StringBuilder result = new StringBuilder();
+
+        String[] words = sentence.split("\\s+");
+
+        for (String word : words) {
+            if (word.length() > 1) {
+                char firstChar = word.charAt(0);
+                char lastChar = word.charAt(word.length() - 1);
+                String middle = word.substring(1, word.length() - 1);
+                result.append(lastChar).append(middle).append(firstChar).append(" ");
+            } else {
+                result.append(word).append(" ");
+            }
+        }
+
+        return result.toString().trim();
+    }
+}

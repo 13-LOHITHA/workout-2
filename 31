@@ -1,0 +1,16 @@
+public class WordReplacement {
+    public static void main(String[] args) {
+        String sentence = "The quick brown fox jumps over the lazy dog.";
+        String originalWord = "fox";
+        String replacementWord = "cat";
+
+        String updatedSentence = replaceWord(sentence, originalWord, replacementWord);
+
+        System.out.println("Original sentence: " + sentence);
+        System.out.println("Updated sentence: " + updatedSentence);
+    }
+
+    public static String replaceWord(String sentence, String originalWord, String replacementWord) {
+        return sentence.replaceAll("\\b" + originalWord + "\\b", replacementWord);
+    }
+}

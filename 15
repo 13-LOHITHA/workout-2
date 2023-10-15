@@ -1,0 +1,18 @@
+public class LowercaseCharacterCount {
+    public static void main(String[] args) {
+        String str = "Hello World";
+
+        int lowercaseCount = countLowercaseCharacters(str);
+
+        System.out.println("Number of lowercase characters in the string: " + lowercaseCount);
+    }
+
+    public static int countLowercaseCharacters(String str) {
+        int count = 0;
+        for (char c : str.toCharArray()) {
+            if (Character.isLowerCase(c)) {
+                count++;
+            }
+        }
+        return count;
+    }

@@ -1,0 +1,23 @@
+import java.util.StringTokenizer;
+
+public class WordsWithSpecificLength {
+    public static void main(String[] args) {
+        String sentence = "The quick brown fox jumps over the lazy dog.";
+
+        int targetLength = 5;  // Change this length to your desired length
+
+        System.out.println("Words with " + targetLength + " characters:");
+        printWordsWithSpecificLength(sentence, targetLength);
+    }
+
+    public static void printWordsWithSpecificLength(String sentence, int targetLength) {
+        StringTokenizer tokenizer = new StringTokenizer(sentence);
+
+        while (tokenizer.hasMoreTokens()) {
+            String word = tokenizer.nextToken();
+            if (word.length() == targetLength) {
+                System.out.println(word);
+            }
+        }
+    }
+}

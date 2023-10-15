@@ -1,0 +1,14 @@
+public class RemoveSpaces {
+    public static void main(String[] args) {
+        String str = "Hello World! This is a sample string.";
+
+        String result = removeSpaces(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("String after removing spaces: " + result);
+    }
+
+    public static String removeSpaces(String str) {
+        return str.replaceAll("\\s", "");  // Remove all spaces using regular expression
+    }
+}

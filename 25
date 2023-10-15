@@ -1,0 +1,23 @@
+import java.util.StringTokenizer;
+
+public class WordsContainingLetter {
+    public static void main(String[] args) {
+        String sentence = "Lions and tigers like lemons.";
+
+        char targetLetter = 'l';  // Change this letter to your desired letter
+
+        System.out.println("Words containing the letter '" + targetLetter + "':");
+        printWordsContainingLetter(sentence, targetLetter);
+    }
+
+    public static void printWordsContainingLetter(String sentence, char targetLetter) {
+        StringTokenizer tokenizer = new StringTokenizer(sentence);
+
+        while (tokenizer.hasMoreTokens()) {
+            String word = tokenizer.nextToken();
+            if (!word.isEmpty() && word.toLowerCase().contains(String.valueOf(targetLetter).toLowerCase())) {
+                System.out.println(word);
+            }
+        }
+    }
+}

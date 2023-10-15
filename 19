@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class PigLatin {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a sentence: ");
+        String sentence = scanner.nextLine();
+        scanner.close();
+
+        String pigLatinSentence = convertToPigLatin(sentence);
+
+        System.out.println("Pig Latin sentence: " + pigLatinSentence);
+    }
+
+    public static String convertToPigLatin(String sentence) {
+        String[] words = sentence.split("\\s+");
+        StringBuilder pigLatinSentence = new StringBuilder();
+
+        for (String word : words) {
+            String pigLatinWord;
+            if (word.length() > 1) {
+                pigLatinWord = word.substring(1) + word.charAt(0) + "ay";
+            } else {
+                pigLatinWord = word + "ay";
+            }
+
+            pigLatinSentence.append(pigLatinWord).append(" ");
+        }
+
+        return pigLatinSentence.toString().trim();
+    }
+}

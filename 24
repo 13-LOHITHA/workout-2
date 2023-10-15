@@ -1,0 +1,21 @@
+import java.util.StringTokenizer;
+
+public class WordsEndingWithLetterL {
+    public static void main(String[] args) {
+        String sentence = "Lions and tigers like lemons.";
+
+        System.out.println("Words ending with 'l':");
+        printWordsEndingWithL(sentence);
+    }
+
+    public static void printWordsEndingWithL(String sentence) {
+        StringTokenizer tokenizer = new StringTokenizer(sentence);
+
+        while (tokenizer.hasMoreTokens()) {
+            String word = tokenizer.nextToken();
+            if (!word.isEmpty() && word.toLowerCase().endsWith("l")) {
+                System.out.println(word);
+            }
+        }
+    }
+}

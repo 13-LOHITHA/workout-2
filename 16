@@ -1,0 +1,25 @@
+public class DigitsFirstString {
+    public static void main(String[] args) {
+        String str = "a3b1c5";
+
+        String newString = digitsFirst(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("New string with digits first: " + newString);
+    }
+
+    public static String digitsFirst(String str) {
+        StringBuilder digits = new StringBuilder();
+        StringBuilder characters = new StringBuilder();
+
+        for (char c : str.toCharArray()) {
+            if (Character.isDigit(c)) {
+                digits.append(c);
+            } else {
+                characters.append(c);
+            }
+        }
+
+        return digits.toString() + characters.toString();
+    }
+}

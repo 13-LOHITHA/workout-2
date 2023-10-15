@@ -1,0 +1,15 @@
+public class WordDeletion {
+    public static void main(String[] args) {
+        String sentence = "The quick brown fox jumps over the lazy dog.";
+        String wordToDelete = "fox";
+
+        String updatedSentence = deleteWord(sentence, wordToDelete);
+
+        System.out.println("Original sentence: " + sentence);
+        System.out.println("Updated sentence: " + updatedSentence);
+    }
+
+    public static String deleteWord(String sentence, String wordToDelete) {
+        return sentence.replaceAll("\\b" + wordToDelete + "\\b", "");
+    }
+}

@@ -1,0 +1,21 @@
+import java.util.StringTokenizer;
+
+public class FirstCharacterOfWords {
+    public static void main(String[] args) {
+        String sentence = "This is a sample sentence.";
+
+        System.out.println("First character of each word:");
+        printFirstCharacterOfWords(sentence);
+    }
+
+    public static void printFirstCharacterOfWords(String sentence) {
+        StringTokenizer tokenizer = new StringTokenizer(sentence);
+        
+        while (tokenizer.hasMoreTokens()) {
+            String word = tokenizer.nextToken();
+            if (!word.isEmpty()) {
+                System.out.print(word.charAt(0) + " ");
+            }
+        }
+    }
+}

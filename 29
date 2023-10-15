@@ -1,0 +1,22 @@
+public class FindWordInString {
+    public static void main(String[] args) {
+        String sentence = "The quick brown fox jumps over the lazy dog.";
+        String targetWord = "fox";
+
+        boolean found = findWord(sentence, targetWord);
+
+        System.out.println("Does the sentence contain the word \"" + targetWord + "\"? " + found);
+    }
+
+    public static boolean findWord(String sentence, String targetWord) {
+        String[] words = sentence.split("\\s+");
+
+        for (String word : words) {
+            if (word.equals(targetWord)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+}
